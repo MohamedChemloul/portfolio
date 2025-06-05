@@ -12,12 +12,25 @@
       rel="stylesheet"
     />
     <!-- Font Awsome -->
-
+    
     <title>Portfolio</title>
-    <script type="module" crossorigin src="/portfolio/assets/index-Yr8innOc.js"></script>
-    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-CjyZ26XL.css">
+    <script type="module" crossorigin src="/portfolio/assets/index-qIFDJa6d.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-DzhCDVm-.css">
   </head>
   <body>
+     <!-- Preloader -->
+     <div id="preloader"></div>
+     <!-- Preloader -->
+
+     <!-- Mail Sent  -->
+     <div class="mail-sent bg-green-600 text-white rounded-xl hidden">
+      Message sent successfully
+     </div>
+     <div class="mail-not-sent bg-red-800 text-white rounded-xl hidden">
+      Error : Message not sent
+     </div>
+     <!-- Mail Sent  -->
+ 
     
     <!-- Navbar -->
     <div class="container">
@@ -417,13 +430,14 @@
     <!-- Contact  -->
     <div class="container">
       <div class="section-title">Contact</div>
-      <div class="contact " id="contact">
+      <div class="contact ">
         <div class="left-side text-white">
           <h1 class="text-4xl text-center">Just Say Hello</h1>
-          <form class="flex flex-col gap-8">
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="E-mail">
-            <textarea cols="30" placeholder="Your Message"></textarea>
+          <form class="flex flex-col gap-8" id="contact">
+            <input type="text" placeholder="Name" name="name" required>
+            <input type="email" placeholder="E-mail" name="email" required>
+            <input type="text" placeholder="Subject" name="subject" >
+            <textarea cols="30" placeholder="Your Message" name="message" required ></textarea>
             <button type="submit" class="text-black">Send</button>
           </form>
         </div>
@@ -480,10 +494,7 @@
                 
               ></span>
     </div>
-    <!-- Preloader -->
-    <div id="preloader"></div>
-    <!-- Preloader -->
-
+   
     <!-- Footer  -->
     <footer class="flex items-center justify-evenly bg-black w-full h-14">
         &copy;All Rights Reserved 2025
