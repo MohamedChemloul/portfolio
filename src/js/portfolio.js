@@ -1,72 +1,79 @@
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import '@iconify/iconify';
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "@iconify/iconify";
 
 AOS.init();
 
+// Toggle Navbar
+let menIcon = document.querySelector(".menu-icon");
+let links = document.querySelector(".links");
 
-
-let menIcon = document.querySelector('.menu-icon');
-let links = document.querySelector('.links')
-
-menIcon.addEventListener('click',()=>{
-    links.classList.toggle('open');
-    AOS.refresh();
-})
-
-
-const toggleBtn = document.getElementById("dark-mode");
-const toggleBtnLight = document.getElementById("light-mode");
-const texts = document.querySelectorAll("h1, h2, h3, a, p, ul, input, textarea");
-const mobLinks = document.querySelector('.links');
-const nav = document.querySelector('nav');
-
-toggleBtn.addEventListener('click', () => {
-  switchTheme('light');
+menIcon.addEventListener("click", () => {
+  links.classList.toggle("open");
+  AOS.refresh();
 });
 
-toggleBtnLight.addEventListener('click', () => {
-  switchTheme('dark');
+// Light Mode
+const toggleBtn = document.getElementById("dark-mode");
+const toggleBtnLight = document.getElementById("light-mode");
+const texts = document.querySelectorAll(
+  "h1, h2, h3, a, p, ul, input, textarea"
+);
+const mobLinks = document.querySelector(".links");
+const nav = document.querySelector("nav");
+const footer = document.querySelector("footer");
+
+toggleBtn.addEventListener("click", () => {
+  switchTheme("light");
+});
+
+toggleBtnLight.addEventListener("click", () => {
+  switchTheme("dark");
 });
 
 function switchTheme(mode) {
-  const isLight = mode === 'light';
+  const isLight = mode === "light";
 
   // Toggle visibility of buttons
-  toggleBtn.classList.toggle('hidden', isLight);
-  toggleBtnLight.classList.toggle('hidden', !isLight);
+  toggleBtn.classList.toggle("hidden", isLight);
+  toggleBtnLight.classList.toggle("hidden", !isLight);
 
   // Toggle body class
-  document.body.classList.toggle('light', isLight);
+  document.body.classList.toggle("light", isLight);
 
   // Text color
-  texts.forEach(text => {
-    text.style.color = isLight ? '#3f3e3e' : '';
+  texts.forEach((text) => {
+    text.style.color = isLight ? "#3f3e3e" : "";
   });
 
   // Backgrounds
-  const bgColor = isLight ? '#fff' : '#000';
+  const bgColor = isLight ? "#eaeaea" : "#000";
   nav.style.backgroundColor = bgColor;
+  footer.style.backgroundColor = bgColor;
   mobLinks.style.backgroundColor = bgColor;
 }
 
+const topBtn = document.querySelector(".to-top");
+window.addEventListener("scroll", () => {
+  if (scrollY >= 800) {
+    topBtn.classList.remove("hidden");
+  } else {
+    topBtn.classList.add("hidden");
+  }
+});
 
-const topBtn = document.querySelector('.to-top')
+topBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
 
-window.addEventListener('scroll',()=>{
-    if(scrollY >= 800){
-        topBtn.classList.remove('hidden')
-    } else{
-        topBtn.classList.add('hidden')
-    }
-})
+// Preloader
 
-topBtn.addEventListener('click',()=>{
-    window.scrollTo({
-        top: 0,
-        behavior : 'smooth'
-    })
-})
+const loader = document.getElementById("preloader");
 
-
+window.addEventListener("load", () => {
+  loader.style.width = "0%";
+  loader.style.opacity = "0";
+});

@@ -1,10 +1,22 @@
 @import "tailwindcss";
+/* Global Rules  */
 :root{
     --main-color:#A6BBCC;
     --second-color: #fec544;
 }
 html{
   scroll-behavior: smooth;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Playfair Display", serif;
+  background-color: #221F1F;
+  overflow-x: hidden;
+
 }
 .section-title {
   color: var(--main-color);
@@ -35,14 +47,49 @@ html{
     left: 0;
   }
 }
+/* Global Rules  */
+/* Loader */
 
+#preloader{
+  background: #fff url('../images/loader.gif') no-repeat center center;
+  background-size: 20%;
+  position: fixed;
+  width: 100%;
+  height : 100vh;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: all 1s ease-in-out;
+}
+/* Loader */
+
+/* ScrollBar  */
+::-webkit-scrollbar{
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #6b6b6b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--second-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-color);
+}
+/* ScrollBar  */
+
+/* Light Mode */
 body.light {
   background: #edededcc;
   color: #3f3e3e;
 }
 body.light nav,
 body.light .links {
-  background-color: #fff;
+  background-color: #eaeaea;
 }
 body:not(.light) {
   background: #221F1F;
@@ -51,18 +98,9 @@ body:not(.light) {
 body.light input::placeholder,textarea::placeholder{
   color: #3f3e3e;
 }
+/* Light Mode */
 
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: "Playfair Display", serif;
-  background-color: #221F1F;
-  overflow-x: hidden;
 
-}
 .container {
   padding-left: 50px;
   padding-right: 50px;
@@ -426,13 +464,14 @@ form input,textarea{
 }
 /* Contact */
 
-
-
-
-
-
-
-
+/* Footer  */
+footer{
+  margin-top: 20px;
+}
+footer i{
+  font-size: 20px;
+}
+/* Footer  */
 
 /* Start Grid System */
 @media (min-width : 576px) {

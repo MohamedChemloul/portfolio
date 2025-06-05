@@ -1,0 +1,25 @@
+{
+  "hash": "c3f9ff6d",
+  "configHash": "45390492",
+  "lockfileHash": "88f87275",
+  "browserHash": "7db4876e",
+  "optimized": {
+    "aos": {
+      "src": "../../node_modules/aos/dist/aos.js",
+      "file": "aos.js",
+      "fileHash": "fcda5c80",
+      "needsInterop": true
+    },
+    "@iconify/iconify": {
+      "src": "../../node_modules/@iconify/iconify/dist/iconify.mjs",
+      "file": "@iconify_iconify.js",
+      "fileHash": "380647a6",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-BUSYA2B4": {
+      "file": "chunk-BUSYA2B4.js"
+    }
+  }
+}
