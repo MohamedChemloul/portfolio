@@ -1,6 +1,8 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "@iconify/iconify";
+import emailjs from '@emailjs/browser';
+
 
 AOS.init();
 
@@ -77,3 +79,46 @@ window.addEventListener("load", () => {
   loader.style.width = "0%";
   loader.style.opacity = "0";
 });
+
+// Form 
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contact');
+
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      emailjs
+        .sendForm(
+          'service_927itk4',     
+          'template_q1dzijr',    
+          form,
+          'qUCQIx3K82K4xnFRn'      
+        )
+        .then(
+          () => {
+            emailSent()
+            form.reset();
+          },
+          (error) => {
+            emailNotSent()
+          }
+        );
+    });
+  } else {
+    console.error('Form with id "contact" not found.');
+  }
+});
+
+function emailSent(){
+  document.querySelector('.mail-sent').classList.remove('hidden');
+            setTimeout(() => {
+              document.querySelector('.mail-sent').classList.add('hidden');
+            }, 3000);
+}
+function emailNotSent(){
+  document.querySelector('.mail-not-sent').classList.remove('hidden');
+            setTimeout(() => {
+              document.querySelector('.mail-not-sent').classList.add('hidden');
+            }, 3000);
+}

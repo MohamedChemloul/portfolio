@@ -47,6 +47,16 @@ body {
     left: 0;
   }
 }
+.mail-sent,
+.mail-not-sent{
+  padding: 10px 20px;
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  transition: all .5s ease-in-out;
+}
 /* Global Rules  */
 /* Loader */
 
@@ -58,7 +68,7 @@ body {
   height : 100vh;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 1000;
   transition: all 1s ease-in-out;
 }
 /* Loader */
