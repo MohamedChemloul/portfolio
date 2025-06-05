@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Stylesheet  -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awsome -->
+
+    <title>Portfolio</title>
+    <script type="module" crossorigin src="/portfolio/assets/index-mIu_b4FM.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-AbmsbC-C.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="container">
+      <nav >
+        <div class="logo">
+          <h1 class=" text-2xl font-bold ">
+            MOHAMED <span class="font-extralight text-[var(--second-color)]">AMINE</span>
+          </h1>
+        </div>
+        <ul class="links flex">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div id="dark-mode">
+          <span
+          class="iconify w-8 h-8 hover:cursor-pointer text-white"
+          data-icon="circum:dark"
+          data-width="24"
+          data-height="24"
+          >
+            </span>
+        </div>
+        <div  id="light-mode" class="hidden">
+          <span
+          class="iconify w-8 h-8 hover:cursor-pointer"
+          data-icon="ix:light-dark"
+          data-width="24"
+          data-height="24"
+          >
+        </div>
+
+        <a href="https://github.com/MohamedChemloul" id="img">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACUCAMAAAA9M+IXAAAAbFBMVEX///8XFRUAAAAUEhL8/PwQDg75+fny8vJoaGjR0dH19fUNCgru7u4JBQXc3Nzo6Oirq6tycnKdnZ1cXFyRkZHJycnj4uJiYmKko6NBQEC9vb2JiIi1tbVQT09GRUUxMDA6OTkdGxt/fn4pKChSgHQGAAAH/klEQVR4nO1c6bayOgz9SC2IDILKKArI+7/jBdQjQwK2FF3rLvfPM9RtSDPspvz798MPP/zwww8/INgY9j50g8yLa3hZ4IZ729C/zQqFYabeOUpggCQ6x6lpfJtdH2F8i3KrZucwrQfmND/MIz8Ov83xAT08JVrNiQ+YdjjzmrRWnN2v+4VuxtexTVHONeXiYO6+STbzq9pub8OB0s++Rji+MuDvk23AwUoO3+C6995zgiFYvSM/vu923lXUsF0TJ95HQ5sZgSNLtoEDx+BjZA1fZH/hANjaHyG7SYvFZFvCebb5ANubtsgPXnAsf/W84SYgEQ5wMCjMVcluPKbEEZ5wWLymgc9gqWTbxLTbag5cRwRljvAEA3+lCOFelDrCE3Bx12AbXldhW/NNVuC7km1bvlflfFdkuwLf/ZpsG39QWqPpx1XZNvtNZdXur8y25usri7+b8+psa75nVXwzLl2Jvw8Gnhq2tjXMvE6reCzoJlqMfqpku23y4cJOkraKjSNTQdRci+PNS9PR7nUqBdttcxqVt5C2vwm9Wy5KmEN18+5WNEcbAs7LyzNTGz50Bs9VN2HMRQjXTfDhJeWMfIzzxQ2ckYyNcOz8fhcXAydmnFst+ECG4pAfug3wbbxyvrQ6O41jGMT9L3T+c+52C1pllRdJUhRV2e6ppy/VbrDv/WOKLH1bxjZEKlwYdiymD5w1zIrtycuCwDTdBqYZZN7JbzXU+vejVt0d02WwrHhA0hlzRktuUuCXg2kb+ijUb3TDduOLBt5oG4XF2O1huyRZpGxsXOe6H/+hPhODdES1sSPMvJk8W2OLZF84KupWDKwSgaO8HBVgvZky+UUfh4bGvKn0gqN8dqerSI5D6WpOKbveOO+0dCNF1t2hdDVp8yJbQVPpu9jOGGQhAZgVqipYuaJGxcYbKlbKpWKqKF8Yyv/gEmW0XGoLL4TSuGDv9oBvjSawyzy+lFKYwFdDFylH5O2hk+2kBWroomGypbsVr3t3DtHcMDipoRvTnyAeeyjPqn1BlSRLNtgS3oAHxXojXJQJnDr1GeKhd1MRTY2quNDAJc4ReSn6AF0iLsjmHByEO7BRBzCHA7UQUuzKwy7xZyi8mwm3Un2UEBMfsxVbxjiiKY0tb637MHM0mDmCZZSboE9JWTX2BJGMuOCBW6qhO01VhngB9wbGxeKPh6+iKYxid7h4lSooR+KBgedK40IDHeneG7pCIyV4G1WXdqrZUiEIbiJqpEH0PYLx5R3gmUKsIST6Ejirp4vvEuci4nZhrsCj3gMi7NWwKpGOgqgYVB0fdBHgMUioIUTEwc/SFetf/yd0V/DdNekqz8H//mUr0l0hkFElpAq6ihSGLoiGQgldpZ3PHYScIUgXV/MS9WNJuLQlFnfDEi3y16jIEvyTSpGstk/w7yypZU6AqHedRMQwNjEdoj7wZsjZkibaZaGHMtryU8UxCBkSfJEDkA2xilhd9wYIwb9OSEKbmgje6hv3ilDQ4/n/7SAj1CvVzosX5xpzxA4vA+JbO7nSGfcdMZ7GK7GnGF4+IEDSIrJ1ETyeIKXXRCVdappOuIfFO3fF5jXJ0xrRgIl3fFqjNSiTyXbUUZi4TQyLGoQWDIk0NgfqzhizhDd0QX1zBfNId7gaNSTlFMKLEYlCa87VlBwK2/Q9HMEk0SCkxzShUMB3PzEbLmGPHV5D3pcTDYsI24mJYCeRmC6kvaHmWy68TuJWU6uL+wJdfdwNAPGCbGx4U/fHeCVji93kSDSDrXSACLaT10XAl5o09boWgOHILoPSlyp+9345fbnFkZO2jGsnLvrp3s38pDtPygAiUyzFbezgCDM3cayrpJu9Wgr+GP0MD70hhJrw5ZS+beMwO13nyC5QtnYvatazLA8HFWr98ZftKZ018j49b6/WOzc0QXpG+mVeBqfnIxpeq2pu0gJoSXQgHqJxiJJ2AJUsQ5QYt6/5w+URXtCDRsbBIiNFoAHeniNYNPbVbYihevRPBpo+p6RqshpVatzm0lcnElhPRlhV7VRT64wnwinjSg1l/cHrB4LH88YmvCeTBtk2jJZZeJzQe/BPxzLGdx6mewxKxBqxXXos2u9Vn/K5OZwBm2sxpuql7jKLL+Ie+u7waKLMgTfOzWBjU+EI2+WiS/9iHRwfM0hu1C0gYE5JJcY5BmxVKHBBbxLjT9U2PKd5oQjnTZao5t5pYePDMj0wTUkTeOib9/WL1L/meZ5sD+Fsb7yhZJbu0or0t+5HsX4fpetvDqjN01U2fdBzX0lFepauEse9w+xMoDAudRFjjq6l8mUCqfUKA5Yjo5LN0OWWUmUz64QtR2beaZouX3J3BsOhk/UtdhIe4Z2ky9SfKHX51m2lZ4sJe1N0V2DbpP1OGrMgP6Xm3qg563ZoprPuMUGXS8kgb/DtJtI6meWXyPf97fGSQyRP11qHbb3f+u9sYdxpbys6Dp8P8SRdR1O8y14IqDfizNIlkzAUK75+yKTOimXpwnHVV83YPnpXXJIuX+09KH/wKuxy69yNTowug2qFQa8hTEQ/lKHLYLvuO4ce2MUjoUucLgOIP/Wauv2WwzK6wLfK52QmkEW9nCFI14JotWCLw/byTowQossh9z7z6rQu9Kz8k9Pfp1v7bJl95/WVuheVd5+YH9+7y5YWlNH4svvHoAfnqj20mA1JZvtn1Tn47otBN3Z6LN7JpGb9Z6lgkfzDDz/88MMP/2f8B9hJaS5smIzrAAAAAElFTkSuQmCC"
+            width="30"
+            height="25"
+            alt="github"
+          />
+        </a>
+        <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+      </nav>
+    </div>
+    <!-- Navbar -->
+
+    <!-- Home Page  -->
+    <div class="container">
+    <div class="home" id="#home">
+        <div class="text">
+          <p class="text-2xl font-normal text-amber-50">
+            Hi, I'm Mohamed Amine Chemloul
+          </p>
+          <div class="job text-7xl font-bold">Frontend <br />Developer</div>
+          <p class="desc">
+            Skilled web developer with proficiency in React, TypeScript,
+            JavaScript, REST API and Tailwind CSS. Passionate about creating
+            quick, responsive apps that solve real issues and enhance user
+            experiences with clean, slick design.
+          </p>
+          <div class="icons flex justify-center">
+            <a href="https://www.linkedin.com/in/mohamed-chemloul-31244b369/">
+              <span
+                class="iconify w-10 h-10 text-[var(--main-color)]"
+                data-icon="mdi:linkedin"
+                data-width="32"
+                data-height="32"
+              ></span>
+            </a>
+            <a href="https://github.com/MohamedChemloul">
+              <span
+                class="iconify w-10 h-10 text-[var(--main-color)]"
+                data-icon="mdi:github"
+                data-width="32"
+                data-height="32"
+              ></span>
+            </a>
+          </div>
+        </div>
+        <div class="image">
+          <img src="/portfolio/assets/image-C0WPULI-.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- Home Page  -->
+
+    <!-- About  -->
+    <div class="container">
+      <div class="about" id="about">
+        <div class="section-title" data-aos="fade-right">About</div>
+        <p class="text-center text-white text-2xl" data-aos="fade-right">
+          I am a front-end fan with a passion for creating responsive,
+          user-oriented web applications. I mostly deal with React, Tailwind
+          CSS, JavaScript, and TypeScript to create clean, trendy solutions for
+          real-world problems. I also add REST APIs to make smooth, scalable
+          data interactions possible.
+        </p>
+        <div class="info text-white text-center">
+          <h3 class="text-2xl font-bold" data-aos="fade-right">
+            Phone :
+            <span class="text-xl font-extralight text-[var(--second-color)]"
+              >+213 562 12 38 73</span
+            >
+          </h3>
+          <h3 class="text-2xl font-bold" data-aos="fade-right">
+            Languages :
+            <span class="text-xl font-extralight text-[var(--second-color)]"
+              >Arabic / French / English</span
+            >
+          </h3>
+          <h3 class="text-2xl font-bold" data-aos="fade-right">
+            Location :
+            <span class="text-xl font-extralight text-[var(--second-color)]"
+              >Tizi Ouzou, Algeria</span
+            >
+          </h3>
+          <h3 class="text-2xl font-bold" data-aos="fade-right">
+            Freelance :
+            <span class="text-xl font-extralight text-[var(--second-color)]"
+              >Available</span
+            >
+          </h3>
+        </div>
+        <a href="#" data-aos="fade-right">
+          <button class="font-bold text-gray-700 cursor-pointer block">
+            Contact Me
+          </button>
+        </a>
+        <a href="./src/files/My CV.pdf" download>
+          <button class="font-bold text-gray-700 cursor-pointer block">
+            Download CV
+          </button>
+        </a>
+      </div>
+    </div>
+    <!-- About  -->
+    <!-- Services -->
+    <div class="services" id="services">
+      <div class="container">
+        <div class="section-title" data-aos="fade-right">Services</div>
+        <div
+          class="service-items grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <div
+            class="service-box flex items-center flex-col rounded-2xl"
+            data-aos="fade-right"
+          >
+            <span
+              class="iconify w-25 h-25"
+              data-icon="mdi:language-html5"
+              data-width="32"
+              data-height="32"
+              id="icon"
+            ></span>
+            <span>HTML/CSS</span>
+            <p class="w-56 p-2.5">
+              I create clean, responsive, and accessible websites using the
+              latest HTML and CSS. From simple landing page to complex layout, I
+              apply pixel-perfect design, cross-browser support, and
+              mobile-first responsiveness.
+            </p>
+          </div>
+
+          <div
+            class="service-box flex items-center flex-col rounded-2xl"
+            data-aos="fade-right"
+          >
+            <span
+              class="iconify w-25 h-25"
+              data-icon="mdi:language-javascript"
+              data-width="32"
+              data-height="32"
+              id="icon"
+            ></span>
+            <span>JavaScript</span>
+            <p class="w-56 p-2.5">
+              I craft rapid, interactive, and intuitive web experiences using
+              the current JavaScript. From DOM manipulation to API integration
+              and custom logic, I get everything working smoothly and
+              intuitively on any device and browser.
+            </p>
+          </div>
+
+          <div
+            class="service-box flex items-center flex-col rounded-2xl"
+            data-aos="fade-right"
+          >
+            <span
+              class="iconify w-25 h-25"
+              data-icon="mdi:language-typescript"
+              data-width="32"
+              data-height="32"
+              id="icon"
+            ></span>
+            <span>TypeScript</span>
+            <p class="w-56 p-2.5">
+              I write quick and stable programs with TypeScript, providing
+              strong typing to JavaScript. This early detection of errors,
+              readability of code, and ease of maintenance in large projects
+              result in high-quality and stable software.
+            </p>
+          </div>
+
+          <div
+            class="service-box flex items-center flex-col rounded-2xl"
+            data-aos="fade-right"
+          >
+            <span
+              class="iconify w-25 h-25"
+              data-icon="mdi:react"
+              data-width="32"
+              data-height="32"
+              id="icon"
+            ></span>
+            <span>React</span>
+            <p class="w-56 p-2.5">
+              I develop scalable and maintainable user interfaces with React,
+              leveraging components, hooks, and state management. I deliver fast
+              rendering and seamless user experiences on desktop and mobile.
+            </p>
+          </div>
+
+          <div
+            class="service-box flex items-center flex-col rounded-2xl"
+            data-aos="fade-right"
+          >
+            <span
+              class="iconify w-25 h-25"
+              data-icon="mdi:github"
+              data-width="30"
+              data-height="30"
+              id="icon"
+            ></span>
+            <span>Github/Git</span>
+            <p class="w-56 p-2.5">
+              I use Git for efficient version control and GitHub for
+              collaborative development. I maintain branches, pull requests, and
+              code reviews in check to guarantee clean codebases and ease
+              collaboration, enabling smooth project workflows and continuous
+              integration.
+            </p>
+          </div>
+
+          <div
+            class="service-box flex items-center flex-col rounded-2xl"
+            data-aos="fade-right"
+          >
+            <span
+              class="iconify w-25 h-25"
+              data-icon="mdi:responsive"
+              data-width="32"
+              data-height="32"
+              id="icon"
+            ></span>
+            <span>Responsive Design</span>
+            <p class="w-56 p-2.5">
+              I design and implement responsive layouts that look perfect on any
+              device — desktop, tablet, or mobile. Using CSS Grid, Flexbox, and
+              media queries, I make sure your site adapts smoothly to all screen
+              sizes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Services -->
+    <!-- Projects  -->
+
+    <div class="projects" id="projects">
+      <div class="container">
+        <div class="section-title overflow-x-hidden">Projects</div>
+        <div
+          class="project-items grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+          
+        >
+          <div
+            class="project-box flex items-center flex-col rounded-2xl"
+            data-aos="fade-up"
+          >
+            <div class="title text">Weather App using React.Js</div>
+            <img src="/portfolio/assets/weather-BUItWI06.png" alt="">
+            <a href="https://mohamedchemloul.github.io/modren-weather-app/" class="live flex items-center justify-center gap-4 ">
+              <span
+              class="iconify w-8 h-8"
+              data-icon="mdi:eye"
+              data-width="24"
+              data-height="24"
+              id="preview"
+            ></span>
+            <p>Live Preview</p>
+            </a>
+          </div>
+
+          <div
+            class="project-box flex items-center flex-col rounded-2xl"
+            data-aos="fade-up"
+          >
+            <div class="title text">E-commerce : Use Html/CSS & JS</div>
+            <img src="/portfolio/assets/e-commerce-B-O63j6Y.png" alt="">
+            <a href="https://mohamedchemloul.github.io/e-commerce-app/" class="live flex items-center justify-center gap-4 ">
+              <span
+              class="iconify w-8 h-8"
+              data-icon="mdi:eye"
+              data-width="24"
+              data-height="24"
+              id="preview"
+              >
+                </span>
+            <p>Live Preview</p>
+            </a>
+          </div>
+
+          <div
+          class="project-box flex items-center flex-col rounded-2xl"
+          data-aos="fade-up"
+        >
+          <div class="title text">Dashboard : Use JavaScript</div>
+          <img src="/portfolio/assets/dashboard-B-ejd3X7.png" alt="">
+          <a href="https://mohamedchemloul.github.io/product-management/" class="live flex items-center justify-center gap-4 ">
+            <span
+            class="iconify w-8 h-8"
+            data-icon="mdi:eye"
+            data-width="24"
+            data-height="24"
+            id="preview"
+            >
+              </span>
+          <p>Live Preview</p>
+          </a>
+        </div>
+
+        
+        <div
+        class="project-box flex items-center flex-col rounded-2xl"
+        data-aos="fade-up"
+      >
+        <div class="title text">Password Generator : JS & Tailwind css</div>
+        <img src="/portfolio/assets/passcraft-Coqd8ljb.png" alt="">
+        <a href="https://mohamedchemloul.github.io/passcraft/" class="live flex items-center justify-center gap-4 ">
+          <span
+          class="iconify w-8 h-8"
+          data-icon="mdi:eye"
+          data-width="24"
+          data-height="24"
+          id="preview"
+          >
+            </span>
+        <p>Live Preview</p>
+        </a>
+      </div>
+      
+      <div
+      class="project-box flex items-center flex-col rounded-2xl"
+      data-aos="fade-up"
+    >
+      <div class="title text">Special Design using HTML/CSS & JavaScript</div>
+      <img src="/portfolio/assets/weather-BUItWI06.png" alt="">
+      <a href="https://mohamedchemloul.github.io/special-app/" class="live flex items-center justify-center gap-4 ">
+        <span
+        class="iconify w-8 h-8"
+        data-icon="mdi:eye"
+        data-width="24"
+        data-height="24"
+        id="preview"
+        >
+          </span>
+      <p>Live Preview</p>
+      </a>
+    </div>
+
+      <div
+      class="project-box flex items-center flex-col rounded-2xl"
+      data-aos="fade-up"
+    >
+        <div class="title text">Use only HTML/CSS</div>
+        <img src="/portfolio/assets/leon-COEyc_t_.png" alt="">
+        <a href="https://mohamedchemloul.github.io/leonTemp/" class="live flex items-center justify-center gap-4 ">
+          <span
+          class="iconify w-8 h-8"
+          data-icon="mdi:eye"
+          data-width="24"
+          data-height="24"
+          id="preview"
+          >
+            </span>
+        <p>Live Preview</p>
+        </a>
+      </div>
+
+    </div>
+    </div>  
+
+    <!-- Projects  -->
+
+    <!-- Contact  -->
+    <div class="container">
+      <div class="section-title">Contact</div>
+      <div class="contact " id="contact">
+        <div class="left-side text-white">
+          <h1 class="text-4xl text-center">Just Say Hello</h1>
+          <form class="flex flex-col gap-8">
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="E-mail">
+            <textarea cols="30" placeholder="Your Message"></textarea>
+            <button type="submit" class="text-black">Send</button>
+          </form>
+        </div>
+        <div class="right-side">
+          <h1 class="text-4xl text-center text-white" data-aos="fade">Contact Info</h1>
+          <div class="info-box flex flex-col justify-between" data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="600">
+
+            <div class="infos flex items-center gap-6">
+              <span
+                class="iconify w-10 h-10 text-[var(--second-color)]"
+                data-icon="mdi:email"
+                data-width="32"
+                data-height="32"
+              ></span>
+              <p class="text-xl text-white">chemloulmohamed511@gmail.com</p>
+            </div>
+  
+            <div class="infos flex items-center gap-6">
+              <span
+                class="iconify w-10 h-10 text-[var(--second-color)]"
+                data-icon="mdi:phone"
+                data-width="32"
+                data-height="32"
+  
+              ></span>
+              <p class="text-xl text-white">+213 562 12 38 73</p>
+            </div>
+  
+            <div class="infos flex items-center gap-6">
+              <span
+                class="iconify w-10 h-10 text-[var(--second-color)]"
+                data-icon="mdi:map-marker"
+                data-width="32"
+                data-height="32"
+  
+              ></span>
+              <p class="text-xl text-white">Tizi Ouzou, Algeria</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- Contact  -->
+    <div class="to-top hidden">
+      <span
+                class="iconify w-10 h-10 text-[var(--second-color)] bg-[var(--main-color)] rounded-t-2xl shadow-lg"
+                data-icon="flowbite:angle-top-solid"
+                data-width="32"
+                data-height="32"
+                id="top"
+                
+              ></span>
+    </div>
+  </body>
+</html>
